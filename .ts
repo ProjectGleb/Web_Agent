@@ -1,1 +1,1 @@
-console.log("TS implementation")
+console.log("TS cleaned")
