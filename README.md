@@ -1,4 +1,4 @@
-# Web Multi-Agent System for Automating Digital Tasks
+# Autonomus and Semi-Autonomus Web Agent for Automating Digital Tasks
 
 Demo: https://drive.google.com/file/d/1myGTO42d8zqeMZ1tbs-yQwYAo5JAf3wQ/view?usp=sharing
 
