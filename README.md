@@ -1,7 +1,7 @@
 # Duality: An AI employee that can control your computer.
 This repo contains autonomus and self autonomus logic for an AI agent that can use your computer to complete tasks.
 
-Demo: https://drive.google.com/file/d/1pmI5eN391Of5rykucSi6S011g5t8Gykd/view?usp=drive_link
+![Duality-demo](https://github.com/user-attachments/assets/3d9fa8c5-fd6a-4cac-b392-f817ebab7481)
 
 The system has two paths for operating:
 1. **An AI gent that can learn to complete computer tasks through a simple video recording of one.** 
