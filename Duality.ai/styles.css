@@ -88,8 +88,8 @@ textarea {
     bottom: 25px;
     right: 12px;
     background-color: #4a4a4b;
-    background-image: url('images/arrow_g.png');
-    background-size: 20px 20px;
+    background-image: url('images/arrow_g.png'); /* Set the image URL */
+    background-size: 20px 20px; /* Adjust the size of the image */
     background-repeat: no-repeat;
     background-position: center;
     border: none;
@@ -103,7 +103,7 @@ textarea {
 
 #submitButton.active {
     background-color: #f16f33;
-    background-image: url('images/arrow_w.png');
+    background-image: url('images/arrow_w.png'); /* Set the active image URL */
 }
 
 #tasksButton {
@@ -127,7 +127,7 @@ textarea {
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease, background-image 0.3s ease;
-    background-position: 5px center;
+    background-position: 5px center; /* Move the background image */
 }
 
 #tasksButton:hover {
@@ -156,61 +156,51 @@ textarea {
     font-family: 'Avenir', sans-serif;
     font-size: 16px;
     font-weight: normal;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Ensure chat log content starts from the left */
 }
 
-/* Default styling for chat messages */
 .chat-log-container .message {
     display: flex;
     margin-bottom: 10px;
-    max-width: 60%;
     position: relative;
 }
 
-/* User messages (right side) */
-.chat-log-container .user-message {
-    align-self: flex-end; /* Align user messages to the right */
+.user-message {
     justify-content: flex-end;
+    margin-right: 5px;
 }
 
-/* Agent messages (left side) */
-.chat-log-container .agent-message {
-    align-self: flex-start; /* Align agent messages to the left */
-    justify-content: flex-start;
-}
-
-/* Common message styling */
-.chat-log-container .message p {
-    background-color: #f16f33; /* Default background color for user messages */
+.user-message p {
+    background-color: #f16f33; /* Background color for the user message */
     color: white;
     padding: 7px 10px;
-    border-radius: 8px;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-    margin: 0;
-}
-
-/* User message specific styling */
-.chat-log-container .user-message p {
-    background-color: #f16f33; /* Orange background for user messages */
-    margin-right: 10px; /* Space between the message and the left side of the chat log */
+    border-radius: 8px; /* Apply border radius to all corners */
     border-top-right-radius: 0; /* Remove the top-right corner rounding */
-    margin-bottom: 10px;
-
-    
+    max-width: 60%;
+    word-wrap: break-word;
+    white-space: pre-wrap; /* Preserve line breaks */
+    margin: 0;
+    margin-right: 10px; /* Space between the message and the right side of the chat log */
 }
 
-/* Agent message specific styling */
-.chat-log-container .agent-message p {
-    background-color: #333333; /* Dark background for agent messages */
-    margin-left: 10px; /* Space between the message and the right side of the chat log */
+.agent-message {
+    justify-content: flex-start;
+    margin-left: 5px;
+}
+
+.agent-message p {
+    background-color: #4a4a4b; /* Background color for the agent message */
+    color: white;
+    padding: 7px 10px;
+    border-radius: 8px; /* Apply border radius to all corners */
     border-top-left-radius: 0; /* Remove the top-left corner rounding */
-    margin-bottom: 10px;
+    max-width: 60%;
+    word-wrap: break-word;
+    white-space: pre-wrap; /* Preserve line breaks */
+    margin: 0;
+    margin-left: 10px; /* Space between the message and the left side of the chat log */
 }
 
-/* Ensure messages have margin from the ceiling */
+/* Add margin to the first message to ensure it does not touch the upper boundary of the chat log */
 .chat-log-container .message:first-child p {
     margin-top: 10px;
 }
@@ -251,7 +241,7 @@ textarea {
     margin-bottom: 10px;
     cursor: pointer;
     outline: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, background-image 0.3s ease;
     background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
@@ -265,4 +255,45 @@ textarea {
 
 #button1 {
     background-color: #353536;
-    backg
+    background-image: url('images/plus_g.png');
+}
+
+#button2 {
+    background-color: #353536;
+    background-image: url('images/list_g.png');
+}
+
+#button3 {
+    background-color: #353536;
+    background-image: url('images/globe_g.png');
+}
+
+#button4 {
+    background-color: #353536;
+    background-image: url('images/gear_g.png');
+}
+
+.sidebar-button:hover {
+    background-color: #f16f33;
+}
+
+.sidebar-button:hover#button1 {
+    background-image: url('images/plus_w.png');
+    background-color:  #f16f33;
+
+}
+
+.sidebar-button:hover#button2 {
+    background-image: url('images/list_w.png');
+    background-color:  #f16f33;
+}
+
+.sidebar-button:hover#button3 {
+    background-image: url('images/globe_w.png');
+    background-color:  #f16f33;
+}
+
+.sidebar-button:hover#button4 {
+    background-image: url('images/gear_w.png');
+    background-color:  #f16f33;
+}
