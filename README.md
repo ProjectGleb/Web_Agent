@@ -1,14 +1,13 @@
-# Duality: Your AI employee 🤖
-This repo contains autonomus and semi-autonomus logic for a multi-agent crew that can automate digital labour.
+# Duality: An AI agent that can use your computer to complete tasks.
 
-Demo: https://drive.google.com/file/d/1myGTO42d8zqeMZ1tbs-yQwYAo5JAf3wQ/view?usp=sharing
+Demo: https://drive.google.com/file/d/1pmI5eN391Of5rykucSi6S011g5t8Gykd/view?usp=drive_link
 
 The system has two paths for operating:
-1. **Learning to complete a task through your desktop recording, as if a child. And then being able to complete it without help.** 
-2. **Automatically zero-shotting tasks based on a query.**
+1. **An AI gent that can learn to complete computer tasks through a simple video recording of one.** 
+2. **An AI agent that can autonomousely complete computer tasks with no demonstration. (EXPERIMENTAL)**
 
 ## How It Works:
-### Function 1: Learning Tasks From Your Recordings (Semi-autonomus)
+### Function 1: Semi-autonomus task completion
 1. **Create a Screen Recording:**
     - Record how you complete a task
 2. **Transcription:**
@@ -17,7 +16,7 @@ The system has two paths for operating:
     - The steps are parsed through the agent logic, which initiates a browser session and parses through HTML elements that it deems relevant.
     - The agent then interacts with these elements to perform the task.
 
-### Function 2: Automating Tasks from Text Prompts (Autonomus)
+### Function 2: Autonomus task completion
 1. **Constructing a Plan:**
     - Based on the provided text query, the agent constructs a plan to achieve the specified goal.
 2. **Browser Session and Transcription:**
