@@ -4,7 +4,7 @@ This repo contains autonomus and self autonomus logic for an AI agent that can u
 ![Duality-demo](https://github.com/user-attachments/assets/3d9fa8c5-fd6a-4cac-b392-f817ebab7481)
 
 The system has two paths for operating:
-1. **An AI gent that can learn to complete computer tasks through a simple video recording of one.** 
+1. **An AI gent that can learn to complete computer tasks through a simple video recording of a task.** 
 2. **An AI agent that can autonomousely complete computer tasks with no demonstration. (EXPERIMENTAL)**
 
 ## How It Works:
