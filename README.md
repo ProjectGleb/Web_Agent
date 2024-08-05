@@ -1,4 +1,5 @@
-# Duality: An AI agent that can use your computer to complete tasks.
+# Duality: An AI employee that can control your computer.
+This repo contains autonomus and self autonomus logic for an AI agent that can automate tasks by using your computer.
 
 Demo: https://drive.google.com/file/d/1pmI5eN391Of5rykucSi6S011g5t8Gykd/view?usp=drive_link
 
