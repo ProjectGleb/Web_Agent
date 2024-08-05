@@ -28,4 +28,4 @@ This repo contains two types of agent logic:
 4. **Re-Analysis and Iteration:**
     - The agent continuously re-analyzes the changing web state against the goal and iterates the process until the goal is achieved.
    
-P.S: Autonomus Logic is extremely novel and thereby experimental. It makes mistakes, so please use at your own risk.
+P.S: Autonomus Logic is extremely novel and thereby experimental. It makes mistakes, so please use at your own peril.
