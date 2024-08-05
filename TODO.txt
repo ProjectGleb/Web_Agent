@@ -1,0 +1,5 @@
+Things to be added:
+1. Add extra UI functionality, like video recording capabilities, and past tasks. 
+2. Sync the UI with browser bot functionality. So the logic functions as expected.
+3. Dockerise the project once reliable.
+4. Host on AWS
