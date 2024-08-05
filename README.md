@@ -1,14 +1,15 @@
 # Duality: An AI employee that can control your computer.
-This repo contains autonomus and self autonomus logic for an AI agent that can use your computer to complete tasks.
-
 ![Duality-demo](https://github.com/user-attachments/assets/3d9fa8c5-fd6a-4cac-b392-f817ebab7481)
 
-The system has two paths for operating:
-1. **An AI gent that can learn to complete computer tasks through a simple video recording of a task.** 
-2. **An AI agent that can autonomousely complete computer tasks with no demonstration. (EXPERIMENTAL)**
+## Overview
+Duality is an AI agent crew that can take over your browser and complete tasks for you. 
 
-## How It Works:
-### Function 1: Semi-autonomus task completion
+This repo contains two types of agent logic:
+1. **Semi-Autonomus: An AI gent that can learn to complete computer tasks through a simple video recording of a task.** 
+2. **Autonomus: An AI agent that can autonomousely complete computer tasks with no demonstration. (EXPERIMENTAL)**
+
+## Features:
+### Semi-Autonomus Logic:
 1. **Create a Screen Recording:**
     - Record how you complete a task
 2. **Transcription:**
@@ -17,7 +18,7 @@ The system has two paths for operating:
     - The steps are parsed through the agent logic, which initiates a browser session and parses through HTML elements that it deems relevant.
     - The agent then interacts with these elements to perform the task.
 
-### Function 2: Autonomus task completion
+### Autonomus Logic:
 1. **Constructing a Plan:**
     - Based on the provided text query, the agent constructs a plan to achieve the specified goal.
 2. **Browser Session and Transcription:**
