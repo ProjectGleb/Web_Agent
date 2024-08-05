@@ -57,4 +57,41 @@ document.addEventListener('DOMContentLoaded', function() {
         if (content.value.trim()) {
             submitButton.classList.add('active');
         } else {
-            submitButton.classList.rem
+            submitButton.classList.remove('active');
+        }
+    }
+
+    function addMessageToChatLog(message, type) {
+        const messageWrapper = document.createElement('div');
+        messageWrapper.classList.add('message');
+
+        // Apply different class based on the type of message
+        if (type === 'user') {
+            messageWrapper.classList.add('user-message');
+        } else if (type === 'agent') {
+            messageWrapper.classList.add('agent-message');
+        }
+
+        const messageElement = document.createElement('p');
+        messageElement.textContent = message;
+
+        messageWrapper.appendChild(messageElement);
+        chatLog.appendChild(messageWrapper);
+    }
+
+    function clearInput() {
+        content.value = '';
+        submitButton.classList.remove('active');
+    }
+
+    function scrollChatToBottom() {
+        chatLog.scrollTop = chatLog.scrollHeight;
+    }
+
+    function handleSidebarButtonClick(message) {
+        addMessageToChatLog(message, 'user');
+        scrollChatToBottom();
+    }
+
+    content.focus();
+});
