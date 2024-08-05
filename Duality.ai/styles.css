@@ -1,0 +1,268 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #202222;
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.centered-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.chat-interface {
+    margin-left: 50px;
+    top: 20px;
+    border: 1px solid #343437;
+    flex-grow: 1;
+    height: 100%;
+    background-color: #181a1b;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: -20px;
+    justify-content: center;
+}
+
+h1 {
+    margin-top: 70px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Avenir', sans-serif;
+    font-size: 40px;
+    font-weight: normal;
+    margin-left: 30px;
+}
+
+.textarea-container, .chat-log-container {
+    width: 100%;
+    max-width: 700px;
+    min-width: 500px;
+    box-sizing: border-box;
+    margin-left: 30px;
+    justify-self: center;
+}
+
+.textarea-container {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 115px;
+    margin-bottom: 10px;
+    border: 1.5px solid #353536;
+    background-color: #202222;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    resize: none;
+    box-sizing: border-box;
+    font-family: 'Avenir', sans-serif;
+    font-size: 16px;
+    outline: none;
+    caret-color: #f16f33;
+}
+
+::selection {
+    background-color: rgba(241, 111, 51, 0.839);
+    color: white;
+}
+
+#submitButton {
+    position: absolute;
+    bottom: 25px;
+    right: 12px;
+    background-color: #4a4a4b;
+    background-image: url('images/arrow_g.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, background-image 0.3s ease;
+}
+
+#submitButton.active {
+    background-color: #f16f33;
+    background-image: url('images/arrow_w.png');
+}
+
+#tasksButton {
+    position: absolute;
+    bottom: 22px;
+    left: 15px;
+    background-color: transparent;
+    background-image: url('images/record_g.png');
+    background-size: 20px 20px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 100px;
+    width: 110px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: #939393;
+    font-family: 'Avenir', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, background-image 0.3s ease;
+    background-position: 5px center;
+}
+
+#tasksButton:hover {
+    background-image: url('images/record_w.png');
+    background-color: #f16f33;
+    color: white;
+}
+
+.tasks-text {
+    margin-left: 7px;
+}
+
+.chat-log-container {
+    margin-top: 20px;
+}
+
+#chatLog {
+    width: 100%;
+    height: 250px;
+    overflow-y: auto;
+    background-color: #202222;
+    padding-top: 4px;
+    border: 1.5px solid #343437;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Avenir', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensure chat log content starts from the left */
+}
+
+/* Default styling for chat messages */
+.chat-log-container .message {
+    display: flex;
+    margin-bottom: 10px;
+    max-width: 60%;
+    position: relative;
+}
+
+/* User messages (right side) */
+.chat-log-container .user-message {
+    align-self: flex-end; /* Align user messages to the right */
+    justify-content: flex-end;
+}
+
+/* Agent messages (left side) */
+.chat-log-container .agent-message {
+    align-self: flex-start; /* Align agent messages to the left */
+    justify-content: flex-start;
+}
+
+/* Common message styling */
+.chat-log-container .message p {
+    background-color: #f16f33; /* Default background color for user messages */
+    color: white;
+    padding: 7px 10px;
+    border-radius: 8px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+/* User message specific styling */
+.chat-log-container .user-message p {
+    background-color: #f16f33; /* Orange background for user messages */
+    margin-right: 10px; /* Space between the message and the left side of the chat log */
+    border-top-right-radius: 0; /* Remove the top-right corner rounding */
+    margin-bottom: 10px;
+
+    
+}
+
+/* Agent message specific styling */
+.chat-log-container .agent-message p {
+    background-color: #333333; /* Dark background for agent messages */
+    margin-left: 10px; /* Space between the message and the right side of the chat log */
+    border-top-left-radius: 0; /* Remove the top-left corner rounding */
+    margin-bottom: 10px;
+}
+
+/* Ensure messages have margin from the ceiling */
+.chat-log-container .message:first-child p {
+    margin-top: 10px;
+}
+
+.sidebar {
+    width: 70px;
+    background-color: #202222;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#messageHistory {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+#messageHistory li {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.sidebar-buttons-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.sidebar-button {
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sidebar-logo {
+    width: 100%;
+    max-width: 60px;
+    height: auto;
+}
+
+#button1 {
+    background-color: #353536;
+    backg
