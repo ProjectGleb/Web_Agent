@@ -1,22 +1,6 @@
-# Browserbot: an attempt at automating digital tasks 
+# Recording logic
 
 Recording demo video: https://www.youtube.com/watch?v=7KqTQCBoYMg
-
-
-## Setting up the environment
-
-Create anaconda environment
-```
-conda create -n bbot python=3.10 -y 
-
-conda activate bbot
-```
-
-Install dependencies
-```
-pip install -r requirements.txt
-```
-
 
 ## Running the code
     
