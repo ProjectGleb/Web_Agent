@@ -24,8 +24,12 @@ This repo contains two types of agent logic:
 1. **Constructing a Plan:**
     - Based on the provided text query, the agent constructs a plan to achieve the specified goal.
 2. **Browser Session and Transcription:**
-    - The agent begins a browser session and transcribes its screenshots using GPT.
-3. **Parsing and Interaction:**
+    - The agent begins a browser session and transcribes its screenshots using GPT4o.
+3. **Parsing to Memory:**
+   - The agent then saves the screen content into episodic and simantic memory, and takes action based on the context.
+5. **Analysis & Action:**
+    - The agent analyzes the web state against the goal + memory and takes itterative actions until the goal is achieved.
+   
 
 ---
 
@@ -42,8 +46,15 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-    - The transcription is parsed by the LLM into an AgentQL query, which then interacts with the webpage.
-5. **Re-Analysis and Iteration:**
-    - The agent continuously re-analyzes the changing web state against the goal and iterates the process until the goal is achieved.
-   
+Set up the api keys
+```
+AGENTQL_API_KEY=...
+OPENAI_API_KEY=...
+```
+
+##Run
+To run the script you have two options.
+1. Run the main.py script to host a local server and then open then use the frontent app to record and execute tasks.
+2. Run the recording script in the Backend/Recording_Logic folder and then use the agent logic in the same folder to test it.
+
 P.S: Autonomus Logic is extremely novel and thereby experimental. It makes mistakes, so please use at your own peril.
