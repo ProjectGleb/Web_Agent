@@ -37,7 +37,6 @@ This repo contains two types of agent logic:
 Create anaconda environment
 ```
 conda create -n agent_env python=3.10 -y 
-
 conda activate agent_env
 ```
 
@@ -48,8 +47,8 @@ pip install -r requirements.txt
 
 Set up the api keys
 ```
-AGENTQL_API_KEY=...
-OPENAI_API_KEY=...
+AGENTQL_API_KEY=<AGENTQL_API_GOES_HERE>
+OPENAI_API_KEY=<OPENAI_API_GOES_HERE>
 ```
 
 ## Run 💥🏃‍♂️🔥
