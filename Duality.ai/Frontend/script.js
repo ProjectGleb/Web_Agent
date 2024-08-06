@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const messageWrapper = document.createElement('div');
         messageWrapper.classList.add('message');
 
-        // Apply different class based on the type of message
         if (type === 'user') {
             messageWrapper.classList.add('user-message');
         } else if (type === 'agent') {

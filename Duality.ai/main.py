@@ -1,21 +1,17 @@
-# #AGENT QL LOGIC
-
-# get an agent to compare the memory to the user query, and execute the most resemblant one. 
 import json
-import os
+import time
+from pathlib import Path
 from fastapi import FastAPI, Form
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import uvicorn
 import agentql
-import time
+import os
 
-# Load environment variables
 load_dotenv()
 
 app = FastAPI()
 
-# Allow CORS for development purposes
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -24,33 +20,30 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Function to load JSON files based on keywords in the user query
 def load_json_file(user_inp):
-    memory_path = 'memory'
-    for filename in os.listdir(memory_path):
-        if filename.endswith('.json'):
-            file_path = os.path.join(memory_path, filename)
-            with open(file_path, 'r') as file:
-                data = json.load(file)
-                if any(keyword in user_inp.lower() for keyword in filename.lower().replace('.json', '').split('_')):
-                    return data
+    # Using pathlib to construct the memory path
+    memory_path = Path(__file__).resolve().parent / 'Backend' / 'Tasks_Memory'
+    
+    for file_path in memory_path.glob('*.json'):
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+            if any(keyword in user_inp.lower() for keyword in file_path.stem.split('_')):
+                return data
     return None
 
 def agent_logic(user_inp):
     def agentql_logic():
-        # Load the JSON file based on the user query
         elements = load_json_file(user_inp)
         if elements is None:
-            return "No matching action found for the query."
+            return "No matching task found in memory for the query."
 
         time.sleep(4)
         session = agentql.start_session("https://www.google.com")
-        page = session  # This is the main page
+        page = session  # main page
 
         username = os.getenv('USERNAME')
         password = os.getenv('PASSWORD')
 
-        # Update elements with actual username and password
         for key, value in elements.items():
             if isinstance(value, dict):
                 for sub_key, sub_value in value.items():
@@ -61,7 +54,6 @@ def agent_logic(user_inp):
 
         output = "Successfully executed the actions."
 
-        # Execute actions
         for action, value in elements.items():
             if 'Click' in action:
                 Query = f"""
@@ -69,7 +61,6 @@ def agent_logic(user_inp):
                     {value}
                 }}
                 """
-                print(f"Executing Click Query: {Query}")
                 try:
                     response = page.query(Query)
                     element = getattr(response, value)
@@ -79,13 +70,11 @@ def agent_logic(user_inp):
 
             elif 'Type' in action:
                 for item, text in value.items():
-                    print(f"Typing '{text}' into: {item}")
                     Query = f"""
                     {{
                         {item}
                     }}
                     """
-                    print(f"Executing Type Query: {Query}")
                     try:
                         response = page.query(Query)
                         element = getattr(response, item)
@@ -93,7 +82,7 @@ def agent_logic(user_inp):
                     except Exception as e:
                         print(f"Error during typing {text} into {item}: {e}")
 
-        time.sleep(5)  # Wait before stopping the session
+        time.sleep(5)  # Wait before stopping the session to see the task completed
         session.stop()
         return output
 
@@ -102,13 +91,8 @@ def agent_logic(user_inp):
 
 @app.post("/process/")
 def process_input(user_input: str = Form(...)):
-    # Process the input data (e.g., start backend code execution)
     print(f"Received input: {user_input}")
-
-    result = agent_logic(user_inp=user_input)  # Get the result from agent_logic
-
-    # Replace this with your actual processing logic
-    print(f"{user_input}")
+    result = agent_logic(user_inp=user_input)
     return {"result": result}
 
 if __name__ == "__main__":

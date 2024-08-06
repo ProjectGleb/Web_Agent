@@ -1,0 +1,10 @@
+__pycache__/
+
+*.json
+
+*.png
+
+*.avi 
+*.mp4
+
+.DS_Store
