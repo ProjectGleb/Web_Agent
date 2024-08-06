@@ -18,5 +18,5 @@ After checking the task list from GPT-4, use AgentQL to perform the task to chec
 ```
 python agentql_executor.py 
 ```
-If all works well you can save task to memory as json and whala! Your task is fully automated.
+If all works well you can append task to memory folder and whala! Your task is fully automated.
 
