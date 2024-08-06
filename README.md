@@ -24,8 +24,26 @@ This repo contains two types of agent logic:
 2. **Browser Session and Transcription:**
     - The agent begins a browser session and transcribes its screenshots using GPT.
 3. **Parsing and Interaction:**
+
+---
+
+
+
+## Set-up
+Create anaconda environment
+```
+conda create -n agent_env python=3.10 -y 
+
+conda activate agent_env
+```
+
+Install dependencies
+```
+pip install -r requirements.txt
+```
+
     - The transcription is parsed by the LLM into an AgentQL query, which then interacts with the webpage.
-4. **Re-Analysis and Iteration:**
+5. **Re-Analysis and Iteration:**
     - The agent continuously re-analyzes the changing web state against the goal and iterates the process until the goal is achieved.
    
 P.S: Autonomus Logic is extremely novel and thereby experimental. It makes mistakes, so please use at your own peril.
