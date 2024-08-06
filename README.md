@@ -1,7 +1,7 @@
 # Duality: An AI employee that can control your computer.
 ![Duality-demo](https://github.com/user-attachments/assets/3d9fa8c5-fd6a-4cac-b392-f817ebab7481)
 
-## Overview
+## Overview 🔎
 Duality is an AI agent crew that can take over your browser and complete tasks for you. 
 
 This repo contains two types of agent logic:
@@ -10,7 +10,7 @@ This repo contains two types of agent logic:
 
 ---
 
-## Features:
+## Features 🧰:
 ### Semi-Autonomus Logic:
 1. **Create a Screen Recording:**
     - Record how you complete a task
@@ -33,7 +33,7 @@ This repo contains two types of agent logic:
 
 ---
 
-## Set-up
+## Set-up 🔧
 Create anaconda environment
 ```
 conda create -n agent_env python=3.10 -y 
@@ -52,7 +52,7 @@ AGENTQL_API_KEY=...
 OPENAI_API_KEY=...
 ```
 
-##Run
+## Run 💥🏃‍♂️🔥
 To run the script you have two options.
 1. Run the main.py script to host a local server and then open then use the frontent app to record and execute tasks.
 2. Run the recording script in the Backend/Recording_Logic folder and then use the agent logic in the same folder to test it.
