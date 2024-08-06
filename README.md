@@ -8,6 +8,8 @@ This repo contains two types of agent logic:
 1. **Semi-Autonomus (main branch): An AI gent that can learn to complete computer tasks through a simple video recording of a task.** 
 2. **Autonomus (full_brnach): An AI agent that can autonomousely complete computer tasks with no demonstration. (STILL IN CONSTRUCTION)**
 
+---
+
 ## Features:
 ### Semi-Autonomus Logic:
 1. **Create a Screen Recording:**
@@ -26,8 +28,6 @@ This repo contains two types of agent logic:
 3. **Parsing and Interaction:**
 
 ---
-
-
 
 ## Set-up
 Create anaconda environment
