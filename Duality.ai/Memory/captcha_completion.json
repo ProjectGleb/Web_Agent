@@ -1,0 +1,10 @@
+{
+    "Click0": "accept_all_btn",
+    "Type0": {
+        "google_search_box": "google captcha test"
+    },
+    "Click1": "google_search_btn",
+    "Click2": "ReCaptcha_demo",
+    "Click3": "I'm_bot_a_robot_btn",
+    "Click4": "submit"
+}

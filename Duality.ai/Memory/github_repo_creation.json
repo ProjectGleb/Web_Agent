@@ -1,0 +1,21 @@
+{
+    "Click0": "accept_all_btn",
+    "Type0": {
+        "google_search_box": "github.com"
+    },
+    "Click1": "google_search_btn",
+    "Click2": "github_lets_build_from_here_link",
+    "Click3": "github_sign_in_btn",
+    "Type2": {
+        "github_signin_username_box": "username"
+    },
+    "Type3": {
+        "github_signin_password_box": "password"
+    },
+    "Click4": "sign_in_btn",
+    "Type4": {
+        "new_repo_name_box": "Automated QL Repo Test"
+    },
+    "Click5": "public_btn",
+    "Click6": "create_new_repository_btn"
+}
