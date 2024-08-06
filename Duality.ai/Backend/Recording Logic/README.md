@@ -14,7 +14,7 @@ Feed frames of the recorded video and transcribed audio to GPT-4 by running:
  python gpt4_feed.py
 ```
 
-After checking the task list from GPT-4, use AgentQL to perform the task to check its working.
+To check everythin is working as intended use AgentQL to perform the task. 
 ```
 python agentql_executor.py 
 ```
