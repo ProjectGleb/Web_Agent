@@ -6,7 +6,7 @@ Duality is an AI agent crew that can take over your browser and complete tasks f
 
 This repo contains two types of agent logic:
 1. **Semi-Autonomus (main branch): An AI gent that can learn to complete computer tasks through a simple video recording of a task.** 
-2. **Autonomus (full_brnach): An AI agent that can autonomousely complete computer tasks with no demonstration. (STILL IN CONSTRUCTION)**
+2. **Autonomus (full_branch): An AI agent that can autonomousely complete computer tasks with no demonstration. (STILL IN CONSTRUCTION)**
 
 ---
 
