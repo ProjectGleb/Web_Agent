@@ -15,10 +15,9 @@ This repo contains two types of agent logic:
 1. **Create a Screen Recording:**
     - Record how you complete a task
 2. **Transcription:**
-    - The recording is transcribed into actionable steps using GPT4o.
-3. **Parsing and Interaction:**
-    - The steps are parsed through the agent logic, which initiates a browser session and parses through HTML elements that it deems relevant.
-    - The agent then interacts with these elements to perform the task.
+    - The recording is parsed into actionable steps using GPT4o.
+3. **Interaction:**
+    - The agent then initiates a browser session, parses through HTML, finds the relevant page elements and interacts with them according to the query.
 
 ### Autonomus Logic:
 1. **Constructing a Plan:**
