@@ -51,8 +51,8 @@ OPENAI_API_KEY=<OPENAI_API_GOES_HERE>
 ```
 
 ## Run 💥🏃‍♂️🔥
-To run the script you have two options.
-1. Run the main.py script to host a local server and then open then use the frontent app to record and execute tasks.
-2. Run the recording script in the Backend/Recording_Logic folder and then use the agent logic in the same folder to test it.
+To use the application:
+1. Run main.py to host a local server.
+2. Open the html scrip to begin playing with the application in the browser.
 
 P.S: Autonomus Logic is extremely novel and thereby experimental. It makes mistakes, so please use at your own peril.
