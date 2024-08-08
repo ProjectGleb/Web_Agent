@@ -6,6 +6,11 @@ import time
 import sounddevice as sd
 import soundfile as sf
 import threading
+from openai import OpenAI  # Assuming the OpenAI Python package is already installed
+from dotenv import load_dotenv  # Import the dotenv package
+
+# Load environment variables from the .env file
+load_dotenv()
 
 duration = 1000  
 end_time = time.time() + duration
@@ -77,30 +82,22 @@ print('Number of frames:', no_of_frames)
 audio_thread.join()
 cv2.destroyAllWindows()
 
+# Load OpenAI API key from environment
+openai_api_key = os.getenv('OPENAI_API_KEY')
 
-from openai import OpenAI
-import json 
-
-api_keys_file = os.path.join(os.path.dirname(__file__), 'api_keys.json')
-
-if os.path.exists(api_keys_file):
-    with open(api_keys_file, 'r') as f:
-        api_keys = json.load(f)
+if openai_api_key:
+    openai_client = OpenAI(api_key=openai_api_key)
 else:
-    api_keys = {}
+    exit('Please set the OPENAI_API_KEY environment variable.')
 
-if 'openai_api_key' in api_keys:
-    openai_client = OpenAI(api_key=api_keys['openai_api_key'])
-else:
-    exit('Please enter API key')
-
-audio_file= open(audio_output_file, "rb")
+audio_file = open(audio_output_file, "rb")
 transcription = openai_client.audio.transcriptions.create(
-  model="whisper-1", 
-  file=audio_file,
-  language="en"
+    model="whisper-1", 
+    file=audio_file,
+    language="en"
 )
-print('transcribed text : ')
+
+print('Transcribed text:')
 print(transcription.text)
 
 with open(f'{output_folder}/transcription.txt', "w") as text_file:

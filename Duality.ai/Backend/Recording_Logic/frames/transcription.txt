@@ -1,0 +1,1 @@
+Okay, so here we go. I first open up Rightmove. Through Rightmove, I then click see full property details. Once that's clicked, I scroll down a little and click request details button. I then click your message and type in hello world. Once that's done, I click the button send email.

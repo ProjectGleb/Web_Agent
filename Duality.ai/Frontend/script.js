@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const button2 = document.getElementById('button2');
     const button3 = document.getElementById('button3');
     const button4 = document.getElementById('button4');
+    const recordButton = document.getElementById('recordButton');
+    const recordText = document.querySelector('.record-text');
 
     submitButton.addEventListener('click', handleSubmit);
     content.addEventListener('keydown', handleKeyDown);
@@ -14,7 +16,23 @@ document.addEventListener('DOMContentLoaded', function() {
     button2.addEventListener('click', () => handleSidebarButtonClick('Button 2 clicked'));
     button3.addEventListener('click', () => handleSidebarButtonClick('Button 3 clicked'));
     button4.addEventListener('click', () => handleSidebarButtonClick('Button 4 clicked'));
+    recordButton.addEventListener('click', handleRecordButtonClick);
 
+    function handleRecordButtonClick() {
+        recordButton.classList.toggle('recording-active');
+        
+        if (recordButton.classList.contains('recording-active')) {
+            recordText.textContent = 'Stop';
+            addMessageToChatLog("Recording in progress", 'agent');
+        } else {
+            recordText.textContent = 'Record Task';
+            addMessageToChatLog("Recording Stopped. \nWhat would you like to name the task?", 'agent');
+        }
+        
+        scrollChatToBottom();
+    }
+    
+    
     async function handleSubmit() {
         const message = content.value.trim();
         if (message) {

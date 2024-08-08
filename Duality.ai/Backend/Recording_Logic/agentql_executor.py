@@ -84,7 +84,7 @@ def parse_instructions_from_file(file_path):
     return session_url, elements
 
 
-file_path = './golem_tasks.txt'
+file_path = './new_task.txt'
 session_url, elements = parse_instructions_from_file(file_path)
 
 print(elements)

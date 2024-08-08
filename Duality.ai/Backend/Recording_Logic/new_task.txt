@@ -1,0 +1,7 @@
+Website: rightmove.co.uk
+Click: accept_all_cookies_btn
+Click: see_full_property_details_btn
+Click: request_details_btn
+Click: your_message_box
+Type: your_message_box: Hello world
+Click: send_email_btn
