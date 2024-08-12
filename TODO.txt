@@ -4,3 +4,15 @@ Things to be added:
 3. Reach out to customers (med-tech)
 4. Dockerise the project once reliable.
 5. Host on AWS
+
+
+
+User registration with email verification.
+Login and logout functionality.
+Password reset and change functionality.
+User profiles where users can update their information, upload profile pictures, etc.
+
+python manage.py startapp user_register
+
+
+python manage.py startapp user_register
