@@ -1,6 +1,6 @@
 # Duality: An AI employee that can control your computer.
 ![Duality-demo](https://github.com/user-attachments/assets/3d9fa8c5-fd6a-4cac-b392-f817ebab7481)
-Branch implementing the agent logic without any frameworks. Raw python, css, html and js.
+Branch implementing the agent logic without any frameworks. Raw python, css, html and js.<br/>
 
 ## Overview 🔎
 Duality is an AI agent crew that can take over your browser and complete tasks for you. 
