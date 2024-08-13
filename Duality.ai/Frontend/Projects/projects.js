@@ -58,13 +58,24 @@ document.addEventListener('DOMContentLoaded', function() {
         tasksBody.querySelectorAll('.expandable-cell').forEach(cell => {
             cell.addEventListener('click', function(e) {
                 e.stopPropagation(); // Prevent row from being selected
-                this.classList.toggle('expanded');
-                if (this.classList.contains('expanded')) {
-                    this.textContent = this.getAttribute('data-full-text');
-                } else {
-                    this.textContent = truncateText(this.getAttribute('data-full-text'), 30);
-                }
+                const row = this.closest('tr');
+                toggleRowExpansion(row);
             });
+        });
+    }
+
+    // Function to toggle expansion of all cells in a row
+    function toggleRowExpansion(row) {
+        const expandableCells = row.querySelectorAll('.expandable-cell');
+        const isExpanded = row.classList.toggle('expanded');
+        
+        expandableCells.forEach(cell => {
+            cell.classList.toggle('expanded', isExpanded);
+            if (isExpanded) {
+                cell.textContent = cell.getAttribute('data-full-text');
+            } else {
+                cell.textContent = truncateText(cell.getAttribute('data-full-text'), 30);
+            }
         });
     }
 

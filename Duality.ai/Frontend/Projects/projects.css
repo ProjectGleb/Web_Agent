@@ -27,7 +27,7 @@ body, html {
     flex-grow: 1;
     height: 100%;
     background-color: #181a1b;
-    padding: 20px 40px 20px 20px;
+    padding-right: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +43,6 @@ h1 {
     align-self: center;
     color: white;
     margin-top: 165px;
-
 }
 
 h1.clickable-title {
@@ -188,6 +187,12 @@ h1.clickable-title:hover {
 
 tr .expandable-cell {
     padding-bottom: 12px;
+}
+
+/* New class for expanded rows */
+tr.expanded td {
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 .sidebar {

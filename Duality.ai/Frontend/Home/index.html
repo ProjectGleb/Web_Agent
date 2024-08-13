@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Where Future Begins</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <div>
+                <img src="images/logo_w.png" alt="Logo" class="sidebar-logo">
+                <ul id="messageHistory"></ul>
+                <div class="sidebar-buttons-top">
+                    <button class="sidebar-button" id="button1"></button>
+                    <button class="sidebar-button" id="button2"></button>
+                    <button class="sidebar-button" id="button3"></button>
+                </div>
+            </div>
+            <button class="sidebar-button" id="button4"></button>
+        </div>
+        <div class="centered-container">
+            <div class="chat-interface">
+                <h1>Where Future Begins</h1>
+                <div class="textarea-container">
+                    <textarea id="content" placeholder="Ask anything..."></textarea>
+                    <button id="submitButton"></button>
+                    <!-- Record Button Container -->
+                    <div id="recordButton">
+                        <span class="record-text">Record Task</span>
+                        <span class="stop-text">Stop</span>
+                      </div>
+                </div>
+                <div class="chat-log-container">
+                    <div id="chatLog"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
