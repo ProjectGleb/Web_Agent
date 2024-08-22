@@ -1,6 +1,9 @@
 # Duality: An AI employee that can control your computer.
 ![Duality-demo](https://github.com/user-attachments/assets/3d9fa8c5-fd6a-4cac-b392-f817ebab7481)
-WARNING: Repo under construction 👷‍♂️🛠️
+WARNING: I've made a more polished version of this agent built in django called Duality. Code can be found here:![Duality](https://github.com/ProjectGleb/Duality)
+Else, if you dont like Django or like working with raw configuration, this repo is for you.
+
+
 
 ## Overview 🔎
 Duality is an AI agent crew that can take over your browser and complete tasks for you. 
