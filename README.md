@@ -1,4 +1,4 @@
-# Duality: An AI employee that can control your computer.
+# Web-Agent: An AI employee that can control your computer.
 ![Duality-demo](https://github.com/user-attachments/assets/3d9fa8c5-fd6a-4cac-b392-f817ebab7481)
 - WARNING: I've built a more polished version of this agent in Django. Code can be found here:[Duality](https://github.com/ProjectGleb/Duality)
 - Else, if you dont like Django or like working with no abstractions, this repo is for you.
